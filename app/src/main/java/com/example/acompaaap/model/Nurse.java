@@ -1,4 +1,5 @@
 package com.example.acompaaap.model;
 
-public class Medico {
+public class Nurse {
+
 }
