@@ -32,5 +32,6 @@ public class MainActivity extends AppCompatActivity {
         btnGetDoctorsList = (Button) findViewById(R.id.btnGetDoctorsList);
         listView = (ListView) findViewById(R.id.listView);
         doctorService = APIUtils.getDoctorService();
+
     }
 }
