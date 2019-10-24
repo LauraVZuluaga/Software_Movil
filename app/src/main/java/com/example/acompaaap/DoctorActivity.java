@@ -8,8 +8,11 @@ import android.widget.Button;
 import android.widget.EditText;
 import android.widget.TextView;
 
+import com.example.acompaaap.model.Doctor;
 import com.example.acompaaap.remote.APIUtils;
 import com.example.acompaaap.remote.DoctorService;
+
+import retrofit2.Call;
 
 public class DoctorActivity extends AppCompatActivity {
 
@@ -57,7 +60,22 @@ public class DoctorActivity extends AppCompatActivity {
             btnDelete.setVisibility(View.INVISIBLE);
         }
 
-
+        btnSave.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Doctor doctor = new Doctor();
+                doctor.setName(edtDName.getText().toString());
+                if(id !=null && id.trim().length() > 0){
+                    //update doctor
+                }else{
+                    //add doctor
+                }
+            }
+        });
 
     }
+        public void addDoctor(Doctor doctor){
+            Call<Doctor> call = doctorService.addDoctor(doctor);
+        }
+
 }
