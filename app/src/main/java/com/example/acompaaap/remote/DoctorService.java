@@ -14,6 +14,7 @@ import retrofit2.http.Path;
 
 public interface DoctorService {
 
+    //Revisar establecimiento de las rutas
     @GET("doctor/")
     Call<List<Doctor>> getDoctors();
 
